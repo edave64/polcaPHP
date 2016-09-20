@@ -1,4 +1,4 @@
-# Leagacy project - polca!
+# Legacy project - polca!
 This is a reconstruction of the polca! project from edave and sofias.
 
 It is not supposed to be used for anything, it is mostly here for nostalgic reasons.
