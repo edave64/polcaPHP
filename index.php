@@ -8,12 +8,10 @@ if ($_POST['submit']) {
         $out = "";
         while (current($stack)) {
             $out .= '['.key($stack).']: '.current($stack)."<br />\n";
-            next($result);
+            next($stack);
         }
         $result = $out;
-        foreach($stack as $element) {
-            $stackwrite .= "$element";
-        }
+        $stackwrite = implode(" ", $stack);
     }
     else $result = $stack;
 }

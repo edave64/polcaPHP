@@ -17,7 +17,7 @@ function engine ($params, $stack, $rev = false, $rec = false) {
                     else { param_error('+'); return false; }
 
                 case '*':
-                    if (count($stack) >= 2) { array_push($stack, (array_pop($stack) + array_pop($stack))); break; }
+                    if (count($stack) >= 2) { array_push($stack, (array_pop($stack) * array_pop($stack))); break; }
                     else { return param_error('*'); }
 
                 case '-':
@@ -29,7 +29,7 @@ function engine ($params, $stack, $rev = false, $rec = false) {
                 case '/':
                     if (count($stack) >= 2) {
                         $i = array_pop($stack);
-                        array_push($stack, (array_pop($stack) - $i)); break;
+                        array_push($stack, (array_pop($stack) / $i)); break;
                     } else { param_error('/'); return false; }
 
                 case '%':
